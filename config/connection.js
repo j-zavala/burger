@@ -12,7 +12,7 @@ var con = mysql.createConnection({
 // Creates a connection to the database
 con.connect(function (err) {
     if (err) throw err;
-    console.log("Connected! ID is " + connection.threadId);
+    console.log("Connected! ID is " + con.threadId);
 });
 
 module.exports = con;
