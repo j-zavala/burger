@@ -5,20 +5,20 @@ var orm = require('../config/orm.js');
 
 var burger = {
     all: function (cb) {
-        orm.selectAll('cats', function (res) {
+        orm.selectAll('burgers', function (res) {
             cb(res);
         });
     },
     // cols and vals are arrays
-    // creates a new cat in the database
+    // creates a new burger in the database
     create: function (cols, vals, cb) {
-        insertOne('cats', cols, vals, function (res) {
+        insertOne('burgers', cols, vals, function (res) {
             cb(res);
         });
     },
-    // updates a cat within our database
+    // updates a burger within our database
     update: function (objColVals, condition, cb) {
-        orm.updateOne('cats', objColVals, condition, function (res) {
+        orm.updateOne('burgers', objColVals, condition, function (res) {
             cb(res);
         });
     }

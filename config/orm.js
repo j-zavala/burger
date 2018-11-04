@@ -34,7 +34,7 @@ var orm = {
     selectAll: function (tableInput, cb) {
         var queryString = 'SELECT * FROM ' + tableInput + ';';
         connection.query(queryString, function (err, result) {
-            if (error) throw err;
+            if (err) throw err;
             cb(result);
         });
     },
