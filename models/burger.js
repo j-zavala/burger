@@ -12,7 +12,7 @@ var burger = {
     // cols and vals are arrays
     // creates a new burger in the database
     create: function (cols, vals, cb) {
-        insertOne('burgers', cols, vals, function (res) {
+        orm.insertOne('burgers', cols, vals, function (res) {
             cb(res);
         });
     },
